@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  $('input').click(function () {
+    $('input:not(:checked)').parent().removeClass("checked");
+    $('input:checked').parent().addClass("checked");
+  });
+  $('input:checked').parent().addClass("checked");
+
   //Navigation buttons functionality
   $("#start").click(function() {
     $("#question1").show();
