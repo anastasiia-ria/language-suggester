@@ -20,13 +20,11 @@ input {
 
 .card {
   margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 300px;
+  height: 100px;
   border: 1px solid;
-  display: hidden
+  display: none;
+  padding: 30px;
+
 }
 
 label {

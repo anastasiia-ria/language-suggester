@@ -10,22 +10,22 @@
   <div class="container">
     <h1>Choose the best programming language for you</h1>
     <form id="suggester">
+      <button type="button" id="start" >Start</button>
       <div class="card" id="question1">
         <label>Which one do you prefer?</label>
         <div class="buttons">
           <label>
-            <input type="radio" value="1">Low-Level
+            <input type="radio" value="1">Front-end development
           </label>
           <label>
-            <input type="radio" value="2">High-Level
+            <input type="radio" value="2">Back-end development
           </label>
         </div>
         <div class="navigation-buttons"> 
-          <button type="button" class="back">Back</button>
-          <button type="button" class="next">Next</button>
+          <button type="button" id="next1">Next</button>
         </div>
       </div>
-      <div class="card" id="question2-high">
+      <div class="card" id="question2">
         <label>What type of language would you like to learn?</label>
         <div class="buttons">
           <label>
@@ -42,23 +42,8 @@
           </label>
         </div>
         <div class="navigation-buttons"> 
-          <button type="button" class="back">Back</button>
-          <button type="button" class="next">Next</button>
-        </div>
-      </div>
-      <div class="card" id="question2-low">
-        <label>What type of language would you like to learn?</label>
-        <div class="buttons">
-          <label>
-            <input type="radio" value="1">Machine
-          </label>
-          <label>
-            <input type="radio" value="2">Assembly
-          </label>
-        </div>
-        <div class="navigation-buttons"> 
-          <button type="button" class="back">Back</button>
-          <button type="button" class="next">Next</button>
+          <button type="button" id="back2">Back</button>
+          <button type="button" id="next2">Next</button>
         </div>
       </div>
       <div class="card" id="question3">
@@ -78,8 +63,8 @@
           </label>
         </div>
         <div class="navigation-buttons"> 
-          <button type="button" class="back">Back</button>
-          <button type="button" class="next">Next</button>
+          <button type="button" id="back3">Back</button>
+          <button type="button" id="next3">Next</button>
         </div>
       </div>
       <div class="card" id="question4">
@@ -96,8 +81,8 @@
           </label>
         </div>
         <div class="navigation-buttons"> 
-          <button type="button" class="back">Back</button>
-          <button type="button" class="next">Next</button>
+          <button type="button" id="back4">Back</button>
+          <button type="button" id="next4">Next</button>
         </div>
       </div>
       <div class="card" id="question5">
@@ -114,10 +99,9 @@
           </label>
         </div>
         <div class="navigation-buttons"> 
-          <button type="button" class="back">Back</button>
-          <button type="button" class="next">Next</button>
+          <button type="button" id="back5">Back</button>
+          <button type="submit">Submit</button>
         </div>
-        <button type="submit">Submit</button>
       </div>
     </form>
   </div>
