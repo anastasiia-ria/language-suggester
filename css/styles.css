@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(255, 245, 240);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  height: 500px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.form-group {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  width: 60%;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+input {
+  font-size: 20px;
+  padding: 20px 30px;
+}
+
+select {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.hidden {
+  display:none;
+}

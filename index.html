@@ -10,12 +10,14 @@
   <div class="container">
     <h1>Choose the best programming language for you</h1>
     <form>
-      <div class="form-group">
-        <label>Which one do you prefer more?</label>
-        <input id="low" type="button" value="Low-Level">
-        <input id="high" type="button" value="High-Level">
+      <div class="form-group card">
+        <label>Which one do you prefer?</label>
+        <div id="buttons">
+          <input id="low" type="button" value="Low-Level">
+          <input id="high" type="button" value="High-Level">
+        </div>
       </div>
-      <div class="form-group">
+      <div class="form-group card hidden" id="high-level-card">
         <label>What type of language would you like to learn?</label>
         <select id="high-level">
           <option value="1">Procedural</option>
@@ -24,14 +26,14 @@
           <option value="4">Object-Oriented</option>
         </select>
       </div>
-      <div class="form-group">
+      <div class="form-group card hidden" id="low-level-card">
         <label>What type of language would you like to learn?</label>
         <select id="low-level">
           <option value="1">Machine</option>
           <option value="2">Assembly</option>
         </select>
       </div>
-      <div class="form-group">
+      <div class="form-group card hidden" id="code-card">
         <label>What would you like to code?</label>
         <select id="code">
           <option value="1">Mobile App</option>
@@ -40,17 +42,17 @@
           <option value="4">Task automation</option>
         </select>
       </div>
-      <div class="form-group">
+      <div class="form-group card hidden" id="work-on-card">
         <label>What do you prefer to work on?</label>
-        <select id="most_interesting">
+        <select id="work-on">
           <option value="1">Design</option>
           <option value="2">UX</option>
           <option value="3">Logic</option>
         </select>
       </div>
-      <div class="form-group">
+      <div class="form-group card hidden" id="work-place-card">
         <label>Where would you like to work?</label>
-        <select id="code">
+        <select id="work-place">
           <option value="1">Small business/Freelance</option>
           <option value="2">Startups</option>
           <option value="3">Traditional enterprises</option>
