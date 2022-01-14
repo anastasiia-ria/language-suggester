@@ -10,7 +10,7 @@ $(document).ready(function() {
   $('#start').click(function() {
     $('.card').hide();
     $('.lang_card').hide();
-    $('#question1').show();
+    $('#name-card').show();
 
     //Make first input checked on default
     $('input').each(function() {
@@ -22,6 +22,11 @@ $(document).ready(function() {
         $(this).parent().removeClass('checked');
       }
     });
+  });
+
+  $('#next-name').click(function() {
+    $('#name-card').hide();
+    $('#question1').show();
   });
 
   $('#next1').click(function() {
@@ -53,6 +58,11 @@ $(document).ready(function() {
   $('#next4').click(function() {
     $('#question4').hide();
     $('#question5').show();
+  });
+
+  $('#back1').click(function() {
+    $('#question1').hide();
+    $('#name-card').show();
   });
 
   $('#back2-high').click(function() {
@@ -96,6 +106,7 @@ $(document).ready(function() {
     const qThree = $('input:radio[name=question3]:checked').val();
     const qFour = $('input:radio[name=question4]:checked').val();
     const qFive = $('input:radio[name=question5]:checked').val();
+    const nameInput = $('input#name-input').val();
 
     let ruby = 0;
     let c = 0;
@@ -163,5 +174,7 @@ $(document).ready(function() {
       $('#python').show()
       $('#question5').hide();
     }
+
+    $('#name').text(nameInput);
   });
 });

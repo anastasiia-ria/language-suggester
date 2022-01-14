@@ -7,11 +7,6 @@ body {
   text-align: center;
 }
 
-input {
-  padding: 10px;
-  margin: 10px;
-}
-
 .btn {
   background-color: #13041a;
   color: #b0e6e8;
@@ -22,6 +17,7 @@ input {
   margin: 30px 5px 0;
   text-transform: uppercase;
   font-weight: normal;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -51,6 +47,16 @@ input {
   padding: 30px;
 }
 
+#name-card input{
+  display: block;
+  width: 200px;
+  margin:20px auto;
+  padding: 10px;
+  background-color: #13041a;
+  color: #b0e6e8;
+  border: #b0e6e8 2px solid;
+}
+
 label {
   text-align: center;
   font-size: 30px;
@@ -78,8 +84,10 @@ label {
   color: #13041a;
 }
 
-input {
+.buttons input {
   display: none;
+  padding: 10px;
+  margin: 10px;
 }
 
 .checked {
