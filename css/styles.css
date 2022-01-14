@@ -41,13 +41,24 @@ label {
 }
 
 .buttons label:hover {
-  background-color: red;;
+  background-color: red;
 }
 
-input {
+/*input {
   visibility:hidden;
+}*/
+
+.buttons input[type="radio"]:checked + label{
+  background-color: red;
 }
 
 .navigation-buttons {
   margin-top: 20px;
+}
+
+.lang_card {
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  display: none;
 }

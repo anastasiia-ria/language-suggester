@@ -3,6 +3,7 @@ $(document).ready(function() {
   //Navigation buttons functionality
   $("#start").click(function() {
     $("#question1").show();
+    $(".lang_card").hide();
   });
 
   $("#next1").click(function() {
@@ -47,12 +48,14 @@ $(document).ready(function() {
 
   //Submit button functions
   $("#suggester").submit(function(event) {
-    const qOne = parseInt($("input:radio[name=question1]:checked").val());
-    const qTwo = parseInt($("input:radio[name=question1]:checked").val());
-    const qThree = parseInt($("input:radio[name=question1]:checked").val());
-    const qFour = parseInt($("input:radio[name=question1]:checked").val());
-    const qFive = parseInt($("input:radio[name=question1]:checked").val());
-    const highestScore = 0;
+    event.preventDefault();
+
+    const qOne = $("input:radio[name=question1]:checked").val();
+    const qTwo = $("input:radio[name=question2]:checked").val();
+    const qThree = $("input:radio[name=question3]:checked").val();
+    const qFour = $("input:radio[name=question4]:checked").val();
+    const qFive = $("input:radio[name=question5]:checked").val();
+    let highestScore = 0;
 
     let ruby = 0;
     let c = 0;
@@ -67,9 +70,9 @@ $(document).ready(function() {
 
     if (qTwo === "1") {
       js += 1
-    } else if (qTwo = "2") {
+    } else if (qTwo === "2") {
       python += 1
-    } else if (qTwo = "3") {
+    } else if (qTwo === "3") {
       ruby += 1
     } else {
       c += 1
@@ -77,9 +80,9 @@ $(document).ready(function() {
 
     if (qThree === "1") {
       js += 1
-    } else if (qThree = "2") {
+    } else if (qThree === "2") {
       python += 1
-    } else if (qThree = "3") {
+    } else if (qThree === "3") {
       ruby += 1
     } else {
       c += 1
@@ -87,7 +90,7 @@ $(document).ready(function() {
 
     if (qFour === "1") {
       js += 1
-    } else if (qFour = "2") {
+    } else if (qFour === "2") {
       python += 1
     } else {
       ruby += 1
@@ -95,24 +98,29 @@ $(document).ready(function() {
 
     if (qFive === "1") {
       c += 1
-    } else if (qFive = "2") {
+    } else if (qFive === "2") {
       js += 1
     } else {
-      puthon += 1
+      python += 1
     } 
 
-    highestScore = Math.max(ruby, c, js, python)
+    highestScore = Math.max(ruby, c, js, python);
+    console.log(highestScore);
 
     if (ruby === highestScore) {
       $("#ruby").show()
+      $("#question5").hide();
     } else if (c === highestScore) {
       $("#c").show()
+      $("#question5").hide();
     } else if (js === highestScore) {
       $("#js").show()
+      $("#question5").hide();
     } else {
       $("#python").show()
+      $("#question5").hide();
     }
     
-    event.preventDefault();
+    
   });
 });
