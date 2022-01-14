@@ -6,13 +6,11 @@ $(document).ready(function() {
     $('input:checked').parent().addClass('checked');
   });
   
-
   //Navigation buttons functionality
   $('#start').click(function() {
     $('.card').hide();
     $('.lang_card').hide();
     $('#question1').show();
-
 
     //Make first input checked on default
     $('input').each(function() {
@@ -29,13 +27,12 @@ $(document).ready(function() {
   $('#next1').click(function() {
     const qOne = $('input:radio[name=question1]:checked').val();
 
-    $('#question1').hide();
-
     if (qOne === '1') {
       $('#question2-high').show();
     } else {
       $('#question2-low').show();
     }
+    $('#question1').hide();
   });
 
   $('#next2-high').click(function() {
@@ -65,20 +62,18 @@ $(document).ready(function() {
 
   $('#back2-low').click(function() {
     $('#question2-low').hide();
-
     $('#question1').show();
   });
 
   $('#back3').click(function() {
     const qOne = $('input:radio[name=question1]:checked').val();
 
-    $('#question3').hide();
-
     if (qOne === '1') {
       $('#question2-high').show();
     } else {
       $('#question2-low').show();
     }
+    $('#question3').hide();
   });
 
   $('#back4').click(function() {
@@ -96,11 +91,11 @@ $(document).ready(function() {
     event.preventDefault()
 
     const qOne = $('input:radio[name=question1]:checked').val();
-    const qTwo = $('input:radio[name=question2]:checked').val();
+    const qTwoHigh = $('input:radio[name=question2-high]:checked').val();
+    const qTwoLow = $('input:radio[name=question2-low]:checked').val();
     const qThree = $('input:radio[name=question3]:checked').val();
     const qFour = $('input:radio[name=question4]:checked').val();
     const qFive = $('input:radio[name=question5]:checked').val();
-    let highestScore = 0;
 
     let ruby = 0;
     let c = 0;
@@ -109,48 +104,51 @@ $(document).ready(function() {
 
     if (qOne === '1') {
       ruby += 1
-    } else {
+      if (qTwoHigh === '1') {
+        js += 1
+      } else if (qTwoHigh === '2') {
+        python += 1
+      } else if (qTwoHigh === '3') {
+        ruby += 1
+      } else {
+        c += 1
+      }
+    } else if (qOne === '2') { 
       c += 1
-    }
-
-    if (qTwo === '1') {
-      js += 1
-    } else if (qTwo === '2') {
-      python += 1
-    } else if (qTwo === '3') {
-      ruby += 1
-    } else {
-      c += 1
+      if (qTwoLow === '1') {
+        js += 1
+      } else {
+        python += 1
+      }
     }
 
     if (qThree === '1') {
-      js += 1
-    } else if (qThree === '2') {
-      python += 1
-    } else if (qThree === '3') {
       ruby += 1
-    } else {
+    } else if (qThree === '2') {
       c += 1
+    } else if (qThree === '3') {
+      js += 1
+    } else {
+      python += 1
     }
 
     if (qFour === '1') {
-      js += 1
-    } else if (qFour === '2') {
-      python += 1
-    } else {
       ruby += 1
+    } else if (qFour === '2') {
+      c += 1
+    } else {
+      js += 1
     } 
 
     if (qFive === '1') {
-      c += 1
-    } else if (qFive === '2') {
-      js += 1
-    } else {
       python += 1
+    } else if (qFive === '2') {
+      ruby += 1
+    } else {
+      c += 1
     } 
 
-    highestScore = Math.max(ruby, c, js, python);
-    console.log(highestScore);
+    const highestScore = Math.max(ruby, c, js, python);
 
     if (ruby === highestScore) {
       $('#ruby').show()
@@ -165,7 +163,5 @@ $(document).ready(function() {
       $('#python').show()
       $('#question5').hide();
     }
-    
-    
   });
 });

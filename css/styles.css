@@ -1,9 +1,9 @@
 body {
-  background-image: url('../img/background.jpeg');
+  background-image: url("../img/background.jpeg");
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
 }
 
@@ -14,10 +14,10 @@ input {
 
 .btn {
   background-color: #13041a;
-  color:#b0e6e8;
-  border: #b0e6e8 2px solid; 
+  color: #b0e6e8;
+  border: #b0e6e8 2px solid;
   padding: 10px 25px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
   margin: 30px 5px 0;
   text-transform: uppercase;
@@ -26,7 +26,7 @@ input {
 
 .btn:hover {
   background-color: #b0e6e8;
-  color:#13041a;
+  color: #13041a;
 }
 
 .container {
