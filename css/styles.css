@@ -18,6 +18,7 @@ input {
   font-size: 20px;
   margin: 30px 5px 0;
   text-transform: uppercase;
+  font-weight: normal;
 }
 
 .btn:hover {
