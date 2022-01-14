@@ -27,12 +27,24 @@ $(document).ready(function() {
   });
 
   $('#next1').click(function() {
+    const qOne = $('input:radio[name=question1]:checked').val();
+
     $('#question1').hide();
-    $('#question2').show();
+
+    if (qOne === '1') {
+      $('#question2-high').show();
+    } else {
+      $('#question2-low').show();
+    }
   });
 
-  $('#next2').click(function() {
-    $('#question2').hide();
+  $('#next2-high').click(function() {
+    $('#question2-high').hide();
+    $('#question3').show();
+  });
+
+  $('#next2-low').click(function() {
+    $('#question2-low').hide();
     $('#question3').show();
   });
 
@@ -46,14 +58,27 @@ $(document).ready(function() {
     $('#question5').show();
   });
 
-  $('#back2').click(function() {
-    $('#question2').hide();
+  $('#back2-high').click(function() {
+    $('#question2-high').hide();
+    $('#question1').show();
+  });
+
+  $('#back2-low').click(function() {
+    $('#question2-low').hide();
+
     $('#question1').show();
   });
 
   $('#back3').click(function() {
+    const qOne = $('input:radio[name=question1]:checked').val();
+
     $('#question3').hide();
-    $('#question2').show();
+
+    if (qOne === '1') {
+      $('#question2-high').show();
+    } else {
+      $('#question2-low').show();
+    }
   });
 
   $('#back4').click(function() {
