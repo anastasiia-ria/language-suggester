@@ -9,54 +9,115 @@
 <body>
   <div class="container">
     <h1>Choose the best programming language for you</h1>
-    <form>
-      <div class="form-group card">
+    <form id="suggester">
+      <div class="card" id="question1">
         <label>Which one do you prefer?</label>
-        <div id="buttons">
-          <input id="low" type="button" value="Low-Level">
-          <input id="high" type="button" value="High-Level">
+        <div class="buttons">
+          <label>
+            <input type="radio" value="1">Low-Level
+          </label>
+          <label>
+            <input type="radio" value="2">High-Level
+          </label>
+        </div>
+        <div class="navigation-buttons"> 
+          <button type="button" class="back">Back</button>
+          <button type="button" class="next">Next</button>
         </div>
       </div>
-      <div class="form-group card hidden" id="high-level-card">
+      <div class="card" id="question2-high">
         <label>What type of language would you like to learn?</label>
-        <select id="high-level">
-          <option value="1">Procedural</option>
-          <option value="2">Functional</option>
-          <option value="3">Sctipting</option>
-          <option value="4">Object-Oriented</option>
-        </select>
+        <div class="buttons">
+          <label>
+            <input type="radio" value="1">Procedural
+          </label>
+          <label>
+            <input type="radio" value="2">Functional
+          </label>
+          <label>
+            <input type="radio" value="3">Sctipting
+          </label>
+          <label>
+            <input type="radio" value="4">Object-Oriented
+          </label>
+        </div>
+        <div class="navigation-buttons"> 
+          <button type="button" class="back">Back</button>
+          <button type="button" class="next">Next</button>
+        </div>
       </div>
-      <div class="form-group card hidden" id="low-level-card">
+      <div class="card" id="question2-low">
         <label>What type of language would you like to learn?</label>
-        <select id="low-level">
-          <option value="1">Machine</option>
-          <option value="2">Assembly</option>
-        </select>
+        <div class="buttons">
+          <label>
+            <input type="radio" value="1">Machine
+          </label>
+          <label>
+            <input type="radio" value="2">Assembly
+          </label>
+        </div>
+        <div class="navigation-buttons"> 
+          <button type="button" class="back">Back</button>
+          <button type="button" class="next">Next</button>
+        </div>
       </div>
-      <div class="form-group card hidden" id="code-card">
+      <div class="card" id="question3">
         <label>What would you like to code?</label>
-        <select id="code">
-          <option value="1">Mobile App</option>
-          <option value="2">Website</option>
-          <option value="3">Game</option>
-          <option value="4">Task automation</option>
-        </select>
+        <div class="buttons">
+          <label>
+            <input type="radio" value="1">Mobile App
+          </label>
+          <label>
+            <input type="radio" value="2">Website
+          </label>
+          <label>
+            <input type="radio" value="3">Game
+          </label>
+          <label>
+            <input type="radio" value="4">Automation
+          </label>
+        </div>
+        <div class="navigation-buttons"> 
+          <button type="button" class="back">Back</button>
+          <button type="button" class="next">Next</button>
+        </div>
       </div>
-      <div class="form-group card hidden" id="work-on-card">
+      <div class="card" id="question4">
         <label>What do you prefer to work on?</label>
-        <select id="work-on">
-          <option value="1">Design</option>
-          <option value="2">UX</option>
-          <option value="3">Logic</option>
-        </select>
+        <div class="buttons">
+          <label>
+            <input type="radio" value="1">Design
+          </label>
+          <label>
+            <input type="radio" value="2">UX
+          </label>
+          <label>
+            <input type="radio" value="3">Logic
+          </label>
+        </div>
+        <div class="navigation-buttons"> 
+          <button type="button" class="back">Back</button>
+          <button type="button" class="next">Next</button>
+        </div>
       </div>
-      <div class="form-group card hidden" id="work-place-card">
+      <div class="card" id="question5">
         <label>Where would you like to work?</label>
-        <select id="work-place">
-          <option value="1">Small business/Freelance</option>
-          <option value="2">Startups</option>
-          <option value="3">Traditional enterprises</option>
-        </select>
+        <div class="buttons">
+          <label>
+            <input type="radio" value="1">Small business
+          </label>
+          <label>
+            <input type="radio" value="2">Startups
+          </label>
+          <label>
+            <input type="radio" value="3">Big enterprises
+          </label>
+        </div>
+        <div class="navigation-buttons"> 
+          <button type="button" class="back">Back</button>
+          <button type="button" class="next">Next</button>
+        </div>
+        <button type="submit">Submit</button>
       </div>
     </form>
   </div>
