@@ -1,27 +1,29 @@
 $(document).ready(function() {
 
+  //Add checked class to checked items on click
   $('input').click(function () {
     $('input:not(:checked)').parent().removeClass('checked');
     $('input:checked').parent().addClass('checked');
   });
-  $('input:checked').parent().addClass('checked');
+  
 
   //Navigation buttons functionality
   $('#start').click(function() {
     $('.card').hide();
-
-    $('input').prop('checked', false);
-    $('input').each(function() {
-      if ($(this).val() === '1') {
-        $(this).prop('checked', true);
-        console.log("done");
-      } 
-
-    
-    });
-
     $('.lang_card').hide();
     $('#question1').show();
+
+
+    //Make first input checked on default
+    $('input').each(function() {
+      if ($(this).val() === '1') {
+        $(this).prop('checked',true);
+        $(this).parent().addClass('checked');
+      } else {
+        $(this).prop('checked',false);
+        $(this).parent().removeClass('checked');
+      }
+    });
   });
 
   $('#next1').click(function() {
