@@ -183,6 +183,7 @@ $(document).ready(function() {
       $('.name').text(nameInput);
       $('.text').text(', the best language for you is');
     } else {
+      $('.name').text('');
       $('.text').text('The best language for you is');
     }
 
