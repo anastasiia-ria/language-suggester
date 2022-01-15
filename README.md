@@ -40,7 +40,7 @@ Programming Language Suggester offers users to take a quiz and find out what Pro
 1. Click on "START" button to start the quiz.
 2. Enter your name and click on "NEXT" button.
 3. Select your answers and click on "NEXT" button for each question.
-4. Click on BACK button if you need to return to the previous question
+4. Click on "BACK" button if you need to return to the previous question
 5. Click on "SUBMIT" button on the last question and see your results.
 6. Click on "START" button to start the quiz again.
  
