@@ -10,7 +10,7 @@ $(document).ready(function() {
   $('#start').click(function() {
     $('.card').hide();
     $('.lang_card').hide();
-    $('#name-card').show();
+    $('#name-card').slideDown();
 
     //Make first input checked on default
     $('input').each(function() {
@@ -22,6 +22,8 @@ $(document).ready(function() {
         $(this).parent().removeClass('checked');
       }
     });
+
+    $('input#name-input').val('');
   });
 
   $('#next-name').click(function() {
@@ -124,7 +126,7 @@ $(document).ready(function() {
       } else {
         c += 1
       }
-    } else if (qOne === '2') { 
+    } else { 
       c += 1
       if (qTwoLow === '1') {
         js += 1
@@ -175,6 +177,12 @@ $(document).ready(function() {
       $('#question5').hide();
     }
 
-    $('#name').text(nameInput);
+    
+    if (nameInput != '') {
+      $('.name').text(nameInput);
+      $('.text').text(', the best language for you is');
+    } else {
+      $('.text').text('The best language for you is');
+    }
   });
 });
