@@ -161,6 +161,7 @@ $(document).ready(function() {
       c += 1
     } 
 
+    //Show result
     const highestScore = Math.max(ruby, c, js, python);
 
     if (ruby === highestScore) {
@@ -177,12 +178,18 @@ $(document).ready(function() {
       $('#question5').hide();
     }
 
-    
+    //Add name to the result (if name input is not empty)
     if (nameInput != '') {
       $('.name').text(nameInput);
       $('.text').text(', the best language for you is');
     } else {
       $('.text').text('The best language for you is');
     }
+
+    //Answers to get
+    //JavaSctipt: 1,1,3,3,1
+    //C#: 2,1,2,2,3
+    //Python: 1,2,4,1,1
+    //Ruby: 1,3,1,1,2
   });
 });

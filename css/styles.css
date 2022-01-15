@@ -47,10 +47,10 @@ body {
   padding: 30px;
 }
 
-#name-card input{
+#name-card input {
   display: block;
   width: 200px;
-  margin:20px auto;
+  margin: 20px auto;
   padding: 10px;
   background-color: #13041a;
   color: #b0e6e8;
